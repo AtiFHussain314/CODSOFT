@@ -1,0 +1,19 @@
+{
+  "name": "job-board-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack job board with React, Node.js, Express, and MongoDB.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter job-board-server dev\" \"pnpm --filter job-board-client dev\"",
+    "server": "pnpm --filter job-board-server dev",
+    "client": "pnpm --filter job-board-client dev",
+    "seed": "pnpm --filter job-board-server seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
